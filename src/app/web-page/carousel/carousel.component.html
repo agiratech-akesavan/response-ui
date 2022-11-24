@@ -1,0 +1,24 @@
+<ngb-carousel *ngIf="images" [interval]="5000">
+	<ng-template ngbSlide *ngFor="let data of data">
+		<div class="picsum-img-wrapper">
+			<img [src]="data.image" alt="Random first slide" />
+		</div>
+		<div class="carousel-caption container">
+            <div class="carousel-caption-content">
+                <div>
+                    <div class="carousel-caption-heading-div">
+                        <h2 class="carousel-caption-heading">{{data.heading}}</h2>
+                    </div>
+                    <div class="carousel-caption-paragraph-div">
+                        <p class="carousel-caption-paragraph">
+							{{data.paragraph}}
+                        </p>
+						<div class="carousel-caption-button-div">
+							<button mat-raised-button class="carousel-caption-button">Read Article</button>
+						</div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</ng-template>
+</ngb-carousel>
